@@ -1,3 +1,16 @@
+## Course Project 1
+The code uses the sqldf package, if you have it installed, just comment the line:
+install.packages("sqldf")
+
+In case you haven´t downloaded and unzipped the file containing the dataset, run these code:
+
+download.file('https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip','household_power_consumption.zip')
+unzip('household_power_consumption.zip')
+file.remove('household_power_consumption.zip')
+
+Once you have done these steps you can run the code for each plot.
+
+
 ## Introduction
 
 This assignment uses data from
