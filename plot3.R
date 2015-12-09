@@ -4,7 +4,7 @@ dat <- read.csv.sql("household_power_consumption.txt",sql="select * from file wh
 dat$Time <- paste(dat$Date,dat$Time)
 dat$Date <-as.Date(dat$Date,"%d/%m/%Y")
 dat$Time <-strptime(dat$Time,"%d/%m/%Y %H:%M:%S")
-png(filename = "plot4.png", bg = "transparent", width = 480, height = 480, units = 'px')
+png(filename = "plot3.png", bg = "transparent", width = 480, height = 480, units = 'px')
 with(dat, plot(Time, Sub_metering_1, type = 'l', col = 'Black', xlab = "", ylab = "Energy sub metering"))
 with(dat, lines(Time, Sub_metering_2, type = 'l', col = 'Red',  xlab = "", ylab = ""))
 with(dat, lines(Time, Sub_metering_3, type = 'l', col = 'Blue', xlab = "", ylab = ""))

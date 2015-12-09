@@ -4,6 +4,6 @@ dat <- read.csv.sql("household_power_consumption.txt",sql="select * from file wh
 dat$Time <- paste(dat$Date,dat$Time)
 dat$Date <-as.Date(dat$Date,"%d/%m/%Y")
 dat$Time <-strptime(dat$Time,"%d/%m/%Y %H:%M:%S")
-png(filename = "plot4.png", bg = "transparent", width = 480, height = 480, units = 'px')
+png(filename = "plot2.png", bg = "transparent", width = 480, height = 480, units = 'px')
 plot(dat$Time, dat$Global_active_power,type = "l", xlab = '',ylab = "Global Active Power (kilowatts)")
 dev.off()
